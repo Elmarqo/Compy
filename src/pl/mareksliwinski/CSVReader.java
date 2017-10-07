@@ -16,17 +16,9 @@ public class CSVReader {
         this.fileName = fileName;
     }
 
-    ArrayList<String> getArrTab(){
-        return arrTab;
-    }
-
     //Getter
     String getFileName() {
         return fileName;
-    }
-
-    void setArrTab(ArrayList<String> arrTab){
-        this.arrTab = arrTab;
     }
 
     void loader(String fileName, ArrayList<String> arrTab) {
@@ -52,4 +44,5 @@ public class CSVReader {
         for (int i = 0; i < arrTab.size(); i++)
             System.out.println(arrTab.get(i));
     }
+
 }
