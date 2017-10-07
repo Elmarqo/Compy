@@ -20,5 +20,6 @@ public class Main {
 
         compare.sorting(arrTab);
         compare.printOut(arrTab);
+        compare.diff(arrTab, arrTab);
     }
 }

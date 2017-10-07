@@ -9,15 +9,24 @@ import java.util.ArrayList;
 public class CSVReader {
 
     String fileName;
+    ArrayList<String> arrTab = new ArrayList<>();
 
     //Setter
     void setFileName(String fileName) {
         this.fileName = fileName;
     }
 
+    ArrayList<String> getArrTab(){
+        return arrTab;
+    }
+
     //Getter
     String getFileName() {
         return fileName;
+    }
+
+    void setArrTab(ArrayList<String> arrTab){
+        this.arrTab = arrTab;
     }
 
     void loader(String fileName, ArrayList<String> arrTab) {
