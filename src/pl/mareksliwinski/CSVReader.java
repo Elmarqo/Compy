@@ -4,46 +4,43 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class CSVReader {
 
     String fileName;
-    String [] tabName;
 
-    void setFileName(String fileName){
+    //Setter
+    void setFileName(String fileName) {
         this.fileName = fileName;
     }
-    void setTabName(String [] tabName){
-        this.tabName = tabName;
-    }
 
-    String [] getTabName(){
-        return getTabName();
-    }
-    String getFileName(){
+    //Getter
+    String getFileName() {
         return fileName;
     }
 
-    public void loader(String fileName, String[] tabName) {
-
+    void loader(String fileName, ArrayList<String> arrTab) {
         File file = new File(fileName);
-        if(file.isFile())
-            System.out.println("Plik znajduje się w podanej lokalizacji.");
+        if (file.isFile())
+            System.out.println("Plik " + fileName + " znajduje się w podanej lokalizacji.");
         else
             System.out.println("Brak pliku w podanej lokalizacji!!!");
 
         String csvFile = fileName;
         String line = "";
-        String cvsSplitBy = ";";
 
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
 
-            while ((line = br.readLine()) != null) {
-                tabName = line.split(cvsSplitBy);
-                System.out.println(tabName[0]);
-            }
+            while ((line = br.readLine()) != null)
+                arrTab.add(line);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    void printOut(ArrayList<String> arrTab) {
+        for (int i = 0; i < arrTab.size(); i++)
+            System.out.println(arrTab.get(i));
     }
 }
