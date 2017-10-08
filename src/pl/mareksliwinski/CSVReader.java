@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class CSVReader {
 
     String fileName;
-    ArrayList<String> arrTab = new ArrayList<>();
 
     //Setter
     void setFileName(String fileName) {
@@ -23,10 +22,9 @@ public class CSVReader {
 
     void loader(String fileName, ArrayList<String> arrTab) {
         File file = new File(fileName);
-        if (file.isFile())
-            System.out.println("Plik " + fileName + " znajduje się w podanej lokalizacji.");
-        else
+        if (!file.isFile())
             System.out.println("Brak pliku w podanej lokalizacji!!!");
+
 
         String csvFile = fileName;
         String line = "";
