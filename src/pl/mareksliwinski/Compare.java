@@ -14,11 +14,13 @@ public class Compare {
     }
 
     void diff(ArrayList<String> arrTab, ArrayList<String> arrTab2) {
-        arrTab.removeAll(arrTab2);
-    }
-
-    void same(ArrayList<String> arrTab, ArrayList<String> arrTab2) {
-        arrTab.retainAll(arrTab2);
+        //arrTab.removeAll(arrTab);
+        for (String elem : arrTab) {
+            int as = Collections.binarySearch(arrTab2, elem);
+            //System.out.println(as);
+            if(as >= 0)
+                System.out.println(elem);
+        }
     }
 
     void printOut(ArrayList<String> arrTab) {

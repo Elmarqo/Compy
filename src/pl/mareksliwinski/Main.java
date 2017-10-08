@@ -22,15 +22,10 @@ public class Main {
         compare.sorting(arrTab);
         compare.sorting((arrTab2));
 
-        compare.same(arrTab, arrTab2);
-        compare.printOut(arrTab);
+        //compare.same(arrTab, arrTab2);
+        //compare.printOut(arrTab);
 
         compare.diff(arrTab, arrTab2);
-        compare.printOut(arrTab);
-
-        int [] love;
-        int [] kl = new int[45];
-        love = kl;
-        System.out.println(love.length);
+        //compare.printOut(arrTab);
     }
 }
