@@ -52,10 +52,6 @@ public class CSVReader {
         }
         System.out.println("Plik został wczytany poprawnie.");
     }
-    void printOut() {
-        for (int i = 0; i < arrTab.size(); i++)
-            System.out.println(arrTab.get(i));
-    }
     void sorting() {
         Collections.sort(arrTab);
     }

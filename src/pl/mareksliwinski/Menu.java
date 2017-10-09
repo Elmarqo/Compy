@@ -19,29 +19,29 @@ public class Menu {
      void choiceSwitch (ArrayList<String>arrTab, ArrayList<String>arrTab2){
 
         Compare compare = new Compare();
-        Main main = new Main();
 
         String press;
         Scanner input = new Scanner(System.in);
         press = input.nextLine();
 
+
         do {
 
             switch (press) {
                 case "1":
-                    System.out.println("Liczba rekordów znajdujących się w Lista2 i znajdujących się w Lista1 wynosi: ");
+                    System.out.print("Liczba rekordów znajdujących się w Lista2 i znajdujących się w Lista1 wynosi: ");
                     compare.same(arrTab, arrTab2);
-                    menu();
+                    System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
                 case "2":
-                    System.out.println("Liczba rekordów nie znajdujących się w Lista2 a znajdujących się w Lista1 wynosi: ");
+                    System.out.print("Liczba rekordów nie znajdujących się w Lista2 a znajdujących się w Lista1 wynosi: ");
                     compare.diff(arrTab2, arrTab);
-                    menu();
+                    System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
                 case "3":
-                    System.out.println("Liczba rekordów nie znajdujących się w Lista2 a znajdujących się w Lista1 wynosi: ");
+                    System.out.print("Liczba rekordów nie znajdujących się w Lista2 a znajdujących się w Lista1 wynosi: ");
                     compare.diff(arrTab, arrTab2);
-                    menu();
+                    System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
                 case "4":
                     System.out.println("Wyjście z aplikacji");
