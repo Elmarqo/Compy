@@ -5,25 +5,38 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CSVReader {
 
     String fileName;
+    ArrayList<String> arrTab = new ArrayList<>();
+
 
     //Setter
     void setFileName(String fileName) {
         this.fileName = fileName;
     }
+    void  setArrTab (ArrayList<String> arrTab){
+        this.arrTab = arrTab;
+    }
+
 
     //Getter
     String getFileName() {
         return fileName;
     }
+    ArrayList<String> getArrTab(){
+        return arrTab;
+    }
 
-    void loader(String fileName, ArrayList<String> arrTab) {
+    void loader(String fileName) {
         File file = new File(fileName);
         if (!file.isFile())
             System.out.println("Brak pliku w podanej lokalizacji!!!");
+        else
+            System.out.print("Trwa wczytywanie pliku  " + fileName + "... ");
+
 
 
         String csvFile = fileName;
@@ -37,10 +50,14 @@ public class CSVReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Plik został wczytany poprawnie.");
     }
-    void printOut(ArrayList<String> arrTab) {
+    void printOut() {
         for (int i = 0; i < arrTab.size(); i++)
             System.out.println(arrTab.get(i));
+    }
+    void sorting() {
+        Collections.sort(arrTab);
     }
 
 }
