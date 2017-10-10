@@ -7,13 +7,8 @@ import java.io.IOException;
 
 public class SaveToFile {
 
-    private String fileName = "OneToOne.txt";
+    String fileName = "fileName";
     File file = new File(fileName);
-
-    //Setter
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
 
     //Getter
     public File getFile() {

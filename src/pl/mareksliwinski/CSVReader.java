@@ -33,8 +33,6 @@ public class CSVReader {
         else
             System.out.print("Trwa wczytywanie pliku " + fileName + "... ");
 
-
-
         String csvFile = fileName;
         String line = "";
 

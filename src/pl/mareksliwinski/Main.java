@@ -18,6 +18,5 @@ public class Main {
 
         System.out.println("WYBIERZ PORÓWNANIE: ");
         menuList.choiceSwitch(csvreader.getArrTab(), csvreader2.getArrTab());
-
     }
 }

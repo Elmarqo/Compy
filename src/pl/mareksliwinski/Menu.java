@@ -30,17 +30,17 @@ public class Menu {
             switch (press) {
                 case "1":
                     System.out.print("Liczba rekordów znajdujących się w Lista1 i znajdujących się w Lista2 wynosi: ");
-                    compare.same(arrTab, arrTab2);
+                    compare.same(arrTab, arrTab2, "OneToOne.txt");
                     System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
                 case "2":
-                    System.out.print("Liczba rekordów nie znajdujących się w Lista1 a znajdujących się w Lista2 wynosi: ");
-                    compare.diff(arrTab2, arrTab);
+                    System.out.print("Liczba rekordów znajdujących się w Lista2 a nie znajdujących się w Lista1 wynosi: ");
+                    compare.diff(arrTab2, arrTab, "SecondNotOne.txt");
                     System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
                 case "3":
-                    System.out.print("Liczba rekordów nie znajdujących się w Lista2 a znajdujących się w Lista1 wynosi: ");
-                    compare.diff(arrTab, arrTab2);
+                    System.out.print("Liczba rekordów znajdujących się w Lista1 a znajdujących się w Lista2 wynosi: ");
+                    compare.diff(arrTab, arrTab2, "FirstNotSecond.txt");
                     System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
                 case "4":
