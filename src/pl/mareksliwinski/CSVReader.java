@@ -17,10 +17,6 @@ public class CSVReader {
     void setFileName(String fileName) {
         this.fileName = fileName;
     }
-    void  setArrTab (ArrayList<String> arrTab){
-        this.arrTab = arrTab;
-    }
-
 
     //Getter
     String getFileName() {
@@ -35,7 +31,7 @@ public class CSVReader {
         if (!file.isFile())
             System.out.println("Brak pliku w podanej lokalizacji!!!");
         else
-            System.out.print("Trwa wczytywanie pliku  " + fileName + "... ");
+            System.out.print("Trwa wczytywanie pliku " + fileName + "... ");
 
 
 

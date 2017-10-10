@@ -12,7 +12,7 @@ public class Menu {
         System.out.println("1. Rekordy znajdujące się w Lista1 i Lista2");
         System.out.println("2. Rekordy nie znajdujące się w Lista1 a znajdujące się w  Lista2");
         System.out.println("3. Rekordy nie znajdujące się w Lista2 a znajdujące się w  Lista1");
-        System.out.println("4. Wyjście z aplikacji");
+        System.out.println("4. Wyjście z Aplikacji");
         System.out.println("*****************************************");
         System.out.println("");
     }
@@ -29,12 +29,12 @@ public class Menu {
 
             switch (press) {
                 case "1":
-                    System.out.print("Liczba rekordów znajdujących się w Lista2 i znajdujących się w Lista1 wynosi: ");
+                    System.out.print("Liczba rekordów znajdujących się w Lista1 i znajdujących się w Lista2 wynosi: ");
                     compare.same(arrTab, arrTab2);
                     System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
                 case "2":
-                    System.out.print("Liczba rekordów nie znajdujących się w Lista2 a znajdujących się w Lista1 wynosi: ");
+                    System.out.print("Liczba rekordów nie znajdujących się w Lista1 a znajdujących się w Lista2 wynosi: ");
                     compare.diff(arrTab2, arrTab);
                     System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
