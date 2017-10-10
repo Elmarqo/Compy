@@ -7,13 +7,29 @@ import java.io.IOException;
 
 public class SaveToFile {
 
-    private String fileName = "file.txt";
+    private String fileName = "OneToOne.txt";
+    File file = new File(fileName);
 
-    void outputFile(){
-        File file = new File(fileName);
+    //Setter
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    //Getter
+    public File getFile() {
+        return file;
+    }
+
+    void outputFile(String dataToSave){
+
         try {
-            FileWriter fileWriter = new FileWriter(file);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            bw.flush();
+            bw.write(dataToSave);
+            bw.close();
+            fw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

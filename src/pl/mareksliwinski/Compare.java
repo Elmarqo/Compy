@@ -7,12 +7,14 @@ public class Compare {
     ArrayList<String> finalData = new ArrayList<>();
     SaveToFile saveToFile = new SaveToFile();
 
+
     void same(ArrayList<String> arrTab, ArrayList<String> arrTab2) {
+        saveToFile.getFile().delete();
         for (String elem : arrTab) {
             int index = Collections.binarySearch(arrTab2, elem);
             if (index >= 0){
                 finalData.add(elem);
-                saveToFile.outputFile("OneToOne.txt");
+                saveToFile.outputFile(elem + "\n");
             }
         }
         System.out.println(finalData.size());
@@ -21,8 +23,9 @@ public class Compare {
     void diff (ArrayList<String> arrTab, ArrayList<String> arrTab2){
         for (String elem : arrTab){
             int index = Collections.binarySearch(arrTab2, elem);
-            if (index < 0)
+            if (index < 0){
                 finalData.add(elem);
+            }
         }
         System.out.println(finalData.size());
         finalData.clear();
