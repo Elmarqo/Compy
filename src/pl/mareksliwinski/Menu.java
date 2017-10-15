@@ -3,10 +3,10 @@ package pl.mareksliwinski;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Menu {
+class Menu {
 
     void menu(){
-        System.out.println("***************** COMPY *****************");
+        System.out.println("***************** compyJ *****************");
         //System.out.println("");
         //System.out.println("");
         System.out.println("1. Rekordy znajdujące się w Lista1 i Lista2");
@@ -24,12 +24,11 @@ public class Menu {
         Scanner input = new Scanner(System.in);
         press = input.nextLine();
 
-
         do {
 
             switch (press) {
                 case "1":
-                    System.out.print("Liczba rekordów znajdujących się w Lista1 i znajdujących się w Lista2 wynosi: ");
+                    System.out.print("Liczba rekordów znajdujących się w Lista1 i Lista2 wynosi: ");
                     compare.same(arrTab, arrTab2, "OneToOne.txt");
                     System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
@@ -39,7 +38,7 @@ public class Menu {
                     System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
                 case "3":
-                    System.out.print("Liczba rekordów znajdujących się w Lista1 a znajdujących się w Lista2 wynosi: ");
+                    System.out.print("Liczba rekordów znajdujących się w Lista1 a nie znajdujących się w Lista2 wynosi: ");
                     compare.diff(arrTab, arrTab2, "FirstNotSecond.txt");
                     System.out.println("\nWYBIERZ PORÓWNANIE: ");
                     break;
