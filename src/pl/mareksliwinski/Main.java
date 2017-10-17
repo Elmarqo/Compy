@@ -16,7 +16,8 @@ public class Main {
         csvreader2.loader(csvreader2.getFileName());
         csvreader2.sorting();
 
-        System.out.println("WYBIERZ PORÓWNANIE: ");
+        System.out.println("");
+        System.out.print("WYBIERZ POROWNANIE: ");
         menuList.choiceSwitch(csvreader.getArrTab(), csvreader2.getArrTab());
     }
 }

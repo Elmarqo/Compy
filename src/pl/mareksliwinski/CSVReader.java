@@ -12,7 +12,6 @@ public class CSVReader {
     String fileName;
     ArrayList<String> arrTab = new ArrayList<>();
 
-
     //Setter
     void setFileName(String fileName) {
         this.fileName = fileName;
@@ -44,10 +43,12 @@ public class CSVReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Plik został wczytany poprawnie.");
+        System.out.println("OK.");
     }
     void sorting() {
+        System.out.print("Sortowanie...");
         Collections.sort(arrTab);
+        System.out.println("OK.");
     }
 
 }
